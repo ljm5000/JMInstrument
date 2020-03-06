@@ -5,7 +5,7 @@
 
 ## 目的：
 
-#### 现在市面上能做到 <big> 跨平台</big> 监控数据的  <big>只有腾讯  一家PerfDog</big>，确实有技术含量。但是腾讯对于PerfDog的技术比较保密， 出于人无我有，人有我优的基本理念，为了能让更多人知道和了解iOS的性能获取原理，本文简要的描述我们的实现过程
+#### 现在市面上能做到 <big> 跨平台</big> 对非越狱ios机器进行监控数据的  <big>只有腾讯  一家PerfDog</big>，确实有技术含量。但是腾讯对于PerfDog的技术比较保密， 出于人无我有，人有我优的基本理念，为了能让更多人知道和了解iOS的性能获取原理，本文简要的描述我们的实现过程
 
 ## 我们的进度：
 
@@ -42,7 +42,7 @@ iOS Instrument-Server 就像一个按钮，你掌握了打开这个按钮的方�
 
 # iOS Instrument-server的工作原理
 
-##本章目录
+## 本章目录
 
 * Mac os/iOS的协议，工具，系统原理
 	* LaunchDaemon
@@ -95,6 +95,8 @@ LaunchDaemon 简称 Launchd, 维基百科的描述是：
 来源：简书
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
+总的来说，lockdown是个大哥，我们往后的所有通讯都是会和lockdown进行通讯
+
 
 #### USBMUXD
 usbmuxd是对usbmux协议在macOS平台的上实现，也是macOS系统上的一个守护进程（Daemon），它随着系统的启动而启动。
@@ -103,7 +105,7 @@ usbmuxd是对usbmux协议在macOS平台的上实现，也是macOS系统上的一
 
 说白了，usbmuxd的作用就是，通过usb来构建一条socket通道来实现Mac OS与iOS之间的通讯
 
-##干货时刻(监听数据)：
+## 干货时刻(监听数据)：
 
 通过下面的命令行，基本上能获取所有经过该USBMUXD的数据
 
@@ -235,4 +237,8 @@ Exposing missing functionality: Xcode has a number of features that aren't avail
 ![](handshake.png)
 
 -------
-##下一章主要描述，获取数据与解析数据
+## 下一章主要描述，获取数据与解析数据
+
+
+喜欢就请我喝个奶茶可乐咯
+![](WechatIMG8.jpeg)
